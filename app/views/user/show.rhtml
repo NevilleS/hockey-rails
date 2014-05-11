@@ -1,0 +1,52 @@
+<div class="user">
+    <table cellspacing="0">
+        <tr id="header">
+            <td class="user_name"><%= h(@user.name) %></div>
+            <td class="user_stats">
+                <div class="user_wins">Wins: <%= @user.wins %></div>
+                <div class="user_losses">Losses: <%= @user.losses %></div>
+                <div class="user_ties">Ties: <%= @user.ties %></div>
+            </td>
+            <td class="user_fav_team">Favourite Team:
+                <%= h(@user.favourite_team) %></td>
+        </td>
+    </tr>
+</table>
+<div id="body">
+    <% if @user.biggest_victory -%>
+    <div class="biggest_victory"> Biggest Victory:
+	  <table id="game_table">
+            <%= render :partial => "game/game", :object => @user.biggest_victory %>
+	  </table>
+    </div>
+    <% end -%>
+    <div class="team_stats">
+	<p>Best Home Team: <%= @user.winningest_home_team %></p>
+	<p>Best Away Team: <%= @user.winningest_away_team %></p>
+	<p>Best Overall Team: <%= @user.winningest_team %></p>
+    </div>
+    <div class="user_matchups">
+        <table>
+            <tr>
+                <th>Versus</th>
+            </tr>
+            <% for opponent in @others -%>
+            <tr class="matchup_stats">
+                <td class="user_name"><%= h(opponent.name) %></td>
+                <td class="user_stats">
+                    <div class="user_wins">Wins:
+                        <%= @user.wins_against(opponent) %></div>
+                    <div class="user_losses">Losses:
+                        <%= @user.losses_against(opponent) %></div>
+                    <div class="user_ties">Ties: 
+                        <%= @user.ties_against(opponent) %></div>
+                </td>
+            </tr>
+            <% end -%>
+        </table>
+    </div>
+</div>
+</div>
+
+<%= link_to 'Edit', :action => 'edit', :id => @user %> |
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,291 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #444; }
+a:hover { color: #666; }
+
+#notice {
+    border: 2px solid red;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;
+    font: bold smaller sans-serif;
+}
+
+/* Styles for main page */
+#banner {
+    background : #112;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    font: small-caps 30px/30px "Times New Roman", serif;
+    color: #AAD;
+    text-align: center;
+}
+
+#columns {
+    background: #223;
+}
+
+#main {
+    margin-left: 15em;
+    padding-top: 4ex;
+    padding-left: 2em;
+    background: white;
+}
+
+#sidebar {
+    float: left;
+    font: small-caps 2em/2em "Times New Roman", serif;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+#sidebar a {
+    font-weight: bold;
+    color: #AAB;
+}
+
+/* Error fields */
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* Styles for the GAME controller */
+
+table#game_table {
+    width: 100%;
+}
+
+tr.game {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.user_name a:active,
+.user_name a:link,
+.user_name a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+tr.game .away_column .user_name a:hover {
+    color: #559;
+}
+
+tr.game .home_column .user_name a:hover {
+    color: #955;
+}
+
+tr.game .team_logo img {
+    float: left;
+    margin-left: 3em;
+    margin-top: -3em;
+    height: 4em;
+    filter: alpha(opacity=100);
+    opacity: .25;
+}
+
+tr.game .team_name {
+    float: right;
+    margin-left: -50px;
+    text-align: right;
+}
+
+tr.game .score {
+    color: black;
+    font-size: 2em;
+}
+
+tr.game td.links {
+    position: relative;
+    left: 40em;
+    margin-left: 0.5em;
+}
+
+tr.game td.away_column {
+    width: 20em;
+    height: 5em;
+    background-color: #AAF;
+}
+
+tr.game td.away_column .team_name {
+    color: #88D;
+    font-size: 2em;
+}
+
+tr.game td.home_column {
+    position: relative;
+    top: 0em;
+    left: 20em;
+    width: 20em;
+    background-color: #FAA;
+}
+
+tr.game td.home_column .team_name {
+    color: #D88;
+    font-size: 2em;
+}
+
+/* Styles for the USER controller */
+
+.user tr#header {
+    background-color: #AAF;
+}
+
+.user tr#header td {
+    padding: 0.5em;
+}
+
+.user tr#header .user_name {
+    margin: 0.5em;
+    font-weight: bold;
+    font-size: 2em;
+    color: #42F;
+}
+
+.user tr#header .user_details {
+    background-color: #BBF;
+}
+
+.user tr#header .user_stats {
+    background-color: #CCF;
+}
+
+.user tr#header .user_fav_team {
+    background-color: #DDF;
+    color: #55A;
+    font-weight: bold;
+}
+
+table#user_table {
+    width: 80%;
+}
+
+td.links {
+    padding-left: 5px;
+    background: #FFF;
+}
+
+tr.user_odd, tr.user_even {
+    font-weight: bold;
+}
+
+tr.user_odd {
+    background: #AAF;
+}
+
+tr.user_even {
+    background: #FAA;
+}
+
+td.user_name {
+    padding-left: 5px;
+}
+
+tr.user_odd td.user_name a:hover {
+    color: #559;
+}
+
+tr.user_even td.user_name a:hover {
+    color: #955;
+}
+
+tr.user_odd td.user_wins, 
+tr.user_odd td.user_losses,
+tr.user_odd td.user_ties {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    background: #BBF;
+}
+
+tr.user_even td.user_wins, 
+tr.user_even td.user_losses,
+tr.user_even td.user_ties {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    background: #FBB;
+}
+
+td.user_home_win_percentage,
+td.user_away_win_percentage {
+    text-align: center;
+}
+
+td.user_win_percentage {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+}
+
+.hockey_form fieldset {
+    background: #eef;
+}
+
+.hockey_form legend {
+    color: #DDF;
+    background: #114;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0.2em 1em;
+}
+
+.hockey_form label {
+    width: 8em;
+    float: left;
+    text-align: right;
+    margin-right: 0.5em;
+    display: block;
+}
+
+.hockey_form .submit {
+    margin-left: 5.5em;
+}

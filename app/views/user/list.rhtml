@@ -1,0 +1,30 @@
+<table id="user_table" cellspacing="0">
+    <tr id="user_table_header" style="text-align: center">
+        <td>
+            <%= link_to 'User', :action => :list, :column => :username %>
+        </td>
+        <td>
+            <%= link_to 'W', :action => :list, :column => :wins %>
+        </td>
+        <td>
+            <%= link_to 'L', :action => :list, :column => :losses %>
+        </td>
+        <td>
+            <%= link_to 'T', :action => :list, :column => :ties %>
+        </td>
+        <td>
+            <%= link_to 'Home Win %', :action => :list,
+            :column => :home_win_percentage %>
+        </td>
+        <td>
+            <%= link_to 'Away Win %', :action => :list,
+            :column => :away_win_percentage %>
+        </td>
+        <td>
+            <%= link_to 'Overall Win %', :action => :list,
+            :column => :win_percentage %>
+        </td>
+
+        <%= render :partial => "user", :collection => @users %>
+    </table>
+    <%= link_to 'New user', :action => 'new' %>

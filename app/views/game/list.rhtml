@@ -1,0 +1,5 @@
+<table id="game_table">
+    <%= render :partial => "game", :collection => @games %>
+</table>
+<%= pagination_links(@game_pages) %>
+<%= link_to 'New game', :action => 'new' %>

@@ -1,0 +1,24 @@
+<tr class="<%= cycle('user_odd', 'user_even') %>">
+    <td class="user_name">
+        <%= link_to h(user.name), :action => :show, :id => user %>
+    </td>
+    <td class="user_wins"><%= user.wins %></td>
+    <td class="user_losses"><%= user.losses %></td>
+    <td class="user_ties"><%= user.ties %></td>
+    <td class="user_home_win_percentage">
+        <%= number_to_percentage user.home_win_percentage, :precision => 0 %>
+    </td>
+    <td class="user_away_win_percentage">
+        <%= number_to_percentage user.away_win_percentage, :precision => 0 %>
+    </td>
+    <td class="user_win_percentage">
+        <%= number_to_percentage user.win_percentage, :precision => 0 %>
+    </td>
+    <td class="links">
+        <div><%= link_to 'Edit', :action => 'edit', :id => user %></div>
+        <div><%= link_to 'Destroy',
+            { :action => 'destroy', :id => user },
+            :confirm => 'Are you sure?',
+            :method => :post %></div>
+    </td>
+</tr>

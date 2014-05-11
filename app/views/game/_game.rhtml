@@ -1,0 +1,37 @@
+<tr class="game">
+    <td class="away_column">
+        <div class="team_name"><%= h(game.away_team) %></div>
+        <div class="user_name">
+            <%= link_to h(game.away_user.name),
+            :controller => :user,
+            :action => :show,
+            :id => game.away_user
+            %>
+        </div>
+        <div class="score"><%= h(game.away_score) %></div>
+        <div class="team_logo">
+            <%= image_tag("#{game.away_team}.gif") %>
+        </div>
+    </td>
+    <td class="home_column">
+        <div class="team_name"><%= h(game.home_team) %></div>
+        <div class="user_name">
+            <%= link_to h(game.home_user.name),
+            :controller => :user,
+            :action => :show,
+            :id => game.home_user
+            %>
+        </div>
+        <div class="score"><%= h(game.home_score) %></div>
+        <div class="team_logo">
+            <%= image_tag("#{game.home_team}.gif") %>
+        </div>
+    </td>
+    <td class="links">
+        <div><%= link_to 'Edit', :action => 'edit', :id => game %></div>
+        <div><%= link_to 'Destroy',
+            { :action => 'destroy', :id => game },
+            :confirm => 'Are you sure?',
+            :method => :post %></div>
+    </td>
+</tr>

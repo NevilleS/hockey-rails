@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Seagram Hockey Championships</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<div id="banner">
+    <h1>Seagram Hockey Championships</h1>
+</div>
+<div id="columns">
+    <div id="sidebar">
+        <%= link_to 'Users', :controller => :user, :action => :list -%><br/>
+        <%= link_to 'Games', :controller => :game, :action => :list -%><br/> 
+    </div>
+    <div id="main">
+        <% if flash[:notice] -%>
+        <div id="notice"><%= flash[:notice] %></div>
+        <% end -%>
+
+        <%= yield  %>
+    </div>
+</div>
+
+</body>
+</html>
